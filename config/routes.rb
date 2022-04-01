@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get :mypage, to: 'mypage#index'
   devise_for :users
   resources :tags, except: :show
   resources :books
