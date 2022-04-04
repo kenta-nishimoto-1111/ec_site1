@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_04_04_003326) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "product_id"
+    t.integer "book_id"
     t.integer "count"
     t.text "address"
     t.datetime "created_at", precision: 6, null: false
