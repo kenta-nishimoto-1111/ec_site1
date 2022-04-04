@@ -15,6 +15,7 @@
 
     <div class="field">
       <p><%= form.label :book_id %></p>
+      <%= @book.title %>
       <%= form.hidden_field :book_id, value: @book.id %>
     </div>
 
