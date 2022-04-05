@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :tags, except: :show
   resources :books
+  resources :line_items, only: :create 
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

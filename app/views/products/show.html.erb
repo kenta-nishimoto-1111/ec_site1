@@ -30,5 +30,5 @@
     <%= @book.tags.map(&:name).join(', ') %>
   </p>
 
-<%= link_to 'Order', new_order_path(@book) %>
+<%= link_to '買い物かごに入れる', line_items_path(book_id: @book.id), method: :post %>
 <%= link_to 'Back', products_path %>
