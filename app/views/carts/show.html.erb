@@ -1,0 +1,19 @@
+<% @line_items.each do |line_item| %>
+  <% book = line_item.book %>
+  <div>
+    <p><%= book.title %></p>
+    <p><%= line_item.quantity %>冊</p>
+    <p>
+      <%= number_to_currency line_item.total_price, precision: 0, unit: "", format: "%u %n" %>
+      <span>円 (税込)</span>
+    </p>
+  </div>
+<% end %>
+
+<div>
+  <p>合計 <%= @current_cart.total_number %><span>冊</span></p>
+  <p>合計金額
+    <%= number_to_currency @current_cart.total_price, precision: 0, unit: "", format: "%u %n" %>
+    <span>円 (税込)</span>
+  </p>
+</div>

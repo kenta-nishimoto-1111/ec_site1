@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :tags, except: :show
   resources :books
   resources :line_items, only: :create 
-
+  resources :carts, only: :show
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

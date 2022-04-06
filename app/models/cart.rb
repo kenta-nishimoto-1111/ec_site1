@@ -6,4 +6,11 @@ class Cart < ApplicationRecord
         line_items.find_or_initialize_by(book_id: book_id)
     end
 
+    def total_price
+        line_items.to_a.sum {|item| item.total_price}
+    end
+
+    def total_number
+        line_items.to_a.sum {|item| item.quantity}
+    end
 end
